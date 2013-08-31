@@ -172,7 +172,6 @@ def test(otherversion):
     #by passphrase
         input_var = raw_input("Enter Passphrase: ")
         print get_addr(gen_eckey(passphrase= input_var))
-        print "Passphrase: " + input_var
     # by private key
     #print get_addr(gen_eckey(pkey='5K1HkbYffstTZDuV4riUWMbAMkQh57b8798uoy9pXYUDYeUHe7F'))
     #print get_addr(gen_eckey(pkey='L3ATL5R9Exe1ubuAnHVgNgTKZEUKkDvWYAWkLUCyyvzzxRjtgyFe'))
