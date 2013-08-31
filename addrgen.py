@@ -162,15 +162,17 @@ def reencode(pkey,version=0):
 
 def test(otherversion):
     # random compressed
-    print get_addr(gen_eckey(compressed=True,version=otherversion),version=otherversion)
+    #print get_addr(gen_eckey(compressed=True,version=otherversion),version=otherversion)
 
     # uncomment these to create addresses via a different method
     # random uncompressed
     #print get_addr(gen_eckey())
     # by secret
     #print get_addr(gen_eckey(secret=('%064x' % 0xdeadbabe).decode('hex')))
-    # by passphrase
-    #print get_addr(gen_eckey(passphrase='Satoshi Nakamoto'))
+    #by passphrase
+        input_var = raw_input("Enter Passphrase: ")
+        print get_addr(gen_eckey(passphrase= input_var))
+        print "Passphrase: " + input_var
     # by private key
     #print get_addr(gen_eckey(pkey='5K1HkbYffstTZDuV4riUWMbAMkQh57b8798uoy9pXYUDYeUHe7F'))
     #print get_addr(gen_eckey(pkey='L3ATL5R9Exe1ubuAnHVgNgTKZEUKkDvWYAWkLUCyyvzzxRjtgyFe'))
